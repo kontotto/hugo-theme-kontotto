@@ -1,0 +1,29 @@
+//@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import 'mixin';
+@import 'base';
+@import 'layout';
+
+.summary{
+  border-bottom: solid 1px $color-link;
+  h2{
+    margin-bottom: 0.5em;
+    border-bottom: dashed 1px $color-link;
+  }
+  .entry-date{
+    padding: 0.25em 0.5em;
+    margin-bottom: 0.5em;
+    color: $color-background;
+    background-color: $color-link;
+    border-radius: 5px;
+    float: right;
+  }
+}
+
+.post{
+  margin: 15px 0px;
+  padding: 15px 0px;
+  a{
+    color: $color-link;
+  }
+}

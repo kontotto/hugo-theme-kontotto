@@ -1,0 +1,40 @@
+.container{
+  position: relative;
+  min-height: 100%;
+}
+
+.left-col{
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  background: $color-sidebar;
+  color: white;
+  #header{
+    padding: 10% 10% 0 10%;
+  }
+
+  @include max-screen($breakpoint-tablet){
+    position: relative;
+    width: 100%;
+  }
+}
+
+.right-col{
+  width: 75%;
+  position: absolute;
+  right: 0;
+  min-height: 100%;
+  background: $color-background;
+  
+  @include max-screen($breakpoint-tablet){
+    width: 100%;
+  }
+}
+
+.right-col-container{
+  padding: 0px 70px 0px 80px;
+  max-width: 800px;
+  @include max-screen($breakpoint-tablet){
+    padding: 0 15px;
+  }
+}
