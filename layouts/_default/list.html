@@ -1,1 +1,21 @@
-hello this is list
+{{ partial "head.html" . }}
+
+<div class="left-col">
+    {{ partial "header.html" . }}
+</div>
+<main id="main" role="main" class="right-col">
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
+        {{ .Render "archive" }}
+    {{ end }}
+    <nav>
+        {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}"></a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}"></a>
+        {{ end }}
+    </nav>
+</main>
+
+{{ partial "footer.html" . }}

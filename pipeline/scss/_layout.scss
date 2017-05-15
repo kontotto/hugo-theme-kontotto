@@ -9,11 +9,9 @@
   height: 100%;
   background: $color-sidebar;
   color: white;
-  #header{
-    padding: 10% 10% 0 10%;
-  }
 
   @include max-screen($breakpoint-tablet){
+    padding: 10px 0 10px 0;
     position: relative;
     width: 100%;
   }

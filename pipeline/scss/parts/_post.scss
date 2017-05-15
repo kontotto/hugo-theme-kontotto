@@ -1,0 +1,39 @@
+.post{
+  margin: 15px 20px;
+  padding: 15px 0px;
+  max-width: 800px;
+  border-bottom: solid 1px $color-link;
+  h1{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border-bottom: dashed 1px $color-link;
+  }
+  h2{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border-bottom: dashed 1px $color-link;
+  }
+  a{
+    color: $color-link;
+  }
+  .entry-date{
+    padding: 0.25em 0.5em;
+    margin-bottom: 0.5em;
+    color: $color-background;
+    background-color: $color-link;
+    border-radius: 5px;
+    float: right;
+  }
+  @include max-screen($breakpoint-tablet){
+    margin: 15px 0px;
+    padding: 15px 15px;
+  }
+}
+
+.archive{
+  padding: 10px 0px;
+  h2{
+    float:left;
+    border-bottom: none;
+  }
+}

@@ -1,25 +1,21 @@
 {{ partial "head.html" . }}
 
 <div class="left-col">
-    <header id="header">
-        <h1>{{ .Site.Title }}</h1>
-    </header>
+    {{ partial "header.html" . }}
 </div>
 <main id="main" role="main" class="right-col">
-    <div class="right-col-container">
-        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-        {{ range $paginator.Pages }}
-            {{ .Render "summary" }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
+        {{ .Render "summary" }}
+    {{ end }}
+    <nav>
+        {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}"></a>
         {{ end }}
-        <nav>
-            {{ if $paginator.HasPrev }}
-                <a href="{{ $paginator.Prev.URL }}"></a>
-            {{ end }}
-            {{ if $paginator.HasNext }}
-                <a href="{{ $paginator.Next.URL }}"></a>
-            {{ end }}
-        </nav>
-    </div>
+        {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}"></a>
+        {{ end }}
+    </nav>
 </main>
 
 {{ partial "footer.html" . }}

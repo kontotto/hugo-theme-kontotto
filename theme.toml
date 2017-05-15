@@ -11,7 +11,7 @@ features = ["", ""]
 min_version = 0.15
 
 [author]
-  name = ""
+  name = "Shuta Kondo"
   homepage = ""
 
 # If porting an existing theme

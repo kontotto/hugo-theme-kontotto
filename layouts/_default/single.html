@@ -1,1 +1,10 @@
-hello this is single
+{{ partial "head.html" . }}
+
+<div class="left-col">
+    {{ partial "header.html" . }}
+</div>
+<main id="main" role="main" class="right-col">
+    {{ partial "article.html" . }}
+</main>
+
+{{ partial "footer.html" . }}

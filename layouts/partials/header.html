@@ -1,0 +1,47 @@
+<header id="header">
+  <a href="/"><h2>{{ .Site.Title }}</h2></a>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/">Blog</a></li>
+      <li><a href="/post">Archives</a></li>
+    </ul>
+  </nav>
+  <nav class="sub-nav">
+    {{ if .Site.Params.github_user }}
+      <a href="https://github.com/{{ .Site.Params.github_user }}">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-square fa-stack-2x github"></i>
+          <i class="fa fa-github fa-stack-1x"></i>
+        </span>
+      </a>
+    {{ end }}
+    {{ if .Site.Params.twitter_user }}
+      <a href="https://twitter.com/{{ .Site.Params.twitter_user }}">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-square fa-stack-2x twitter"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+      </a>
+    {{ end }}
+    {{ if .Site.Params.google_user }}
+      <a href="https://plus.google.com/{{ .Site.Params.google_user }}">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-square fa-stack-2x google"></i>
+          <i class="fa fa-google fa-stack-1x"></i>
+        </span>
+      </a>
+    {{ end }}
+    {{ if .Site.Params.facebook_user }}
+      <a href="https://facebook.com/{{ .Site.Params.facebook_user }}">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-square fa-stack-2x google"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+      </a>
+    {{ end }}
+    
+
+      <!--{{ if $.Site.Author.email }}-->
+      <!--{{ end }}-->
+  </nav>
+</header>

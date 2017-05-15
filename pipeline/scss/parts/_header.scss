@@ -1,0 +1,70 @@
+#header{
+  padding: 30px 0 20px 20px;
+  opacity: 0.6;
+
+  h2{
+    font-size: 40px;
+    margin: 10px 0;
+  }
+  a{
+    color: white;
+  }
+  &:hover{
+    opacity: 1;
+  }
+  
+  @include max-screen($breakpoint-tablet){
+    text-align: center;
+    opacity: 1;
+  }
+  .main-nav{
+    margin: 30px 0;
+    @include max-screen($breakpoint-tablet){
+      margin: 0;
+    }
+    li{
+      font-size: 20px;
+      margin: 10px;
+      @include max-screen($breakpoint-tablet){
+        font-size: 16px;
+        margin: 10px 10px;
+        display: inline-block;       
+      }
+    }
+  }
+  .sub-nav{
+    a:hover{
+      opacity: 0.6;
+    }
+    @include max-screen($breakpoint-tablet){
+      font-size: 80%;
+    }
+    .github{
+      color: #000000;
+    }
+    .twitter{
+      color: #00aced;
+    }
+    .facebook{
+      color: #305097;
+    }
+    .google{
+      color: #db4a39;
+    }
+    .line{
+      color: #5ae628;
+    }
+    .instagram{
+      color: #3f729b;
+    }
+    .tumblr{
+      color: #34526f;
+    }
+    .flickr{
+      color: #0063dc;
+    }
+    .flickr-pink{
+      color: #ff0084;
+    }
+  }
+}
