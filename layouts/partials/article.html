@@ -1,9 +1,9 @@
 <article class="post">
   <header class="clearfix">
-    <a href="{{ .Permalink }}"><h1>{{ .Title }}</h1></a>
+    <a class="entry-title" href="{{ .Permalink }}"><h1>{{ .Title }}</h1></a>
     <div class="entry-date">{{ .Date.Format "Jan 01, 2006" }}</div>
   </header>
-  <div class="entry-content">
+  <div class="entry-content markdown-body">
     {{ .Content }}
   </div>
 </article>

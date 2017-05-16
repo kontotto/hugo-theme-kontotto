@@ -1,12 +1,14 @@
-<article class="post summary">
-  <header class="clearfix">
-    <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+<div class="post summary">
+  <div class="clearfix">
+    <a class="entry-title" href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
     <div class="entry-date">{{ .Date.Format "Jan 01, 2006" }}</div>
-  </header>
-  <div class="entry-content">
+  </div>
+  <div class="entry-content markdown-body">
     {{ .Summary }}
   </div>
-  <footer>
-    <a href="{{ .Permalink }}"><nobr>Read more -></nobr></a>
-  </footer>
-</article>
+  {{ if .Truncated }}
+  <div>
+    <a href="{{ .Permalink }}"><nobr>続きを読む...</nobr></a>
+  </div>
+  {{ end }}
+</div>
